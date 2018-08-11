@@ -4,20 +4,15 @@
 #import <openssl/evp.h>
 
 struct encryption_ctx {
-    EVP_CIPHER_CTX* ctx;
-    uint8_t status;
-    unsigned char iv[16];
-    size_t iv_len;
-    size_t bytes_remaining; // only for libsodium
-    uint64_t ic; // only for libsodium
-    uint8_t cipher;
+	EVP_CIPHER_CTX* ctx;
+	uint8_t status;
 };
 
 #define STATUS_EMPTY 0
 #define STATUS_INIT 1
 #define STATUS_DESTORYED 2
 
-#define kShadowsocksMethods 13
+#define kShadowsocksMethods 14
 
 const char *shadowsocks_encryption_names[];
 
@@ -32,4 +27,4 @@ void cleanup_encryption(struct encryption_ctx* ctx);
 
 void config_encryption(const char *password, const char *method);
 
-unsigned char *shadowsocks_key;
+char *shadowsocks_key;

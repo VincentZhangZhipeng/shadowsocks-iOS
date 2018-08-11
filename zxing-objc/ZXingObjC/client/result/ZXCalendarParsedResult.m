@@ -31,6 +31,7 @@ const long RFC2445_DURATION_FIELD_UNITS[RFC2445_DURATION_FIELD_UNITS_LEN] = {
 };
 
 @implementation ZXCalendarParsedResult
+@dynamic description;
 
 + (void)initialize {
   DATE_TIME = [[NSRegularExpression alloc] initWithPattern:@"[0-9]{8}(T[0-9]{6}Z?)?"
@@ -69,7 +70,7 @@ const long RFC2445_DURATION_FIELD_UNITS[RFC2445_DURATION_FIELD_UNITS_LEN] = {
     _location = location;
     _organizer = organizer;
     _attendees = attendees;
-    _description = description;
+	  description = description;
     _latitude = latitude;
     _longitude = longitude;
   }

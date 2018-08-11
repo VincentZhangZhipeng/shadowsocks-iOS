@@ -4,3 +4,5 @@ shadowsocks.xcodeproj/project.xcworkspace/
 shadowsocks.xcodeproj/xcuserdata/
 .DS_STORE
 *.dmg
+shadowsocks-iOS.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+shadowsocks-iOS.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
